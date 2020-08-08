@@ -1,5 +1,4 @@
-# Cloudflare Dynamic DNS
-Cloudflare Dynamic DNS in Python3
+Cloudflare Dynamic DNS via Python 3
 
 [https://github.com/mwoolweaver/Cloudflare-Dynamic-DNS](https://github.com/mwoolweaver/Cloudflare-Dynamic-DNS)
 
@@ -7,7 +6,12 @@ Cloudflare Dynamic DNS in Python3
 
 At the top of the python script ([cf_ddns.py](https://github.com/mwoolweaver/Cloudflare_Dynamic_DNS/blob/master/cf_ddns.py)) you will see the following variables. Make sure you change these. I have included some information about how to get these
 
-### 1. Getting API Tokens
+### 1. Install dependencies
+```
+pip3 install requests
+```
+
+### 2. Getting API Tokens
 
 [https://dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens)
 
@@ -19,7 +23,7 @@ headers = {
 }
 ```
 
-### 2. Getting Zone ID's 
+### 3. Getting Zone ID's 
 
 [https://api.cloudflare.com/#zone-list-zones](https://api.cloudflare.com/#zone-list-zones)
 
@@ -27,7 +31,7 @@ headers = {
 zoneID = 'Zone-ID-For-Domain'
 ```
 
-### 3. Getting DNS Record ID 
+### 4. Getting DNS Record ID 
 
 [https://api.cloudflare.com/#dns-records-for-a-zone-list-dns-records](https://api.cloudflare.com/#dns-records-for-a-zone-list-dns-records)
 
@@ -35,7 +39,7 @@ zoneID = 'Zone-ID-For-Domain'
 dnsID = 'DNS-ID-For-SubDomain'
 ```
 
-### 4. Setting Domain That Needs Changed
+### 5. Setting Domain That Needs Changed
 
 [https://api.cloudflare.com/#dns-records-for-a-zone-update-dns-record](https://api.cloudflare.com/#dns-records-for-a-zone-update-dns-record)
 
