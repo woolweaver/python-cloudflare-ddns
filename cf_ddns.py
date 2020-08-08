@@ -35,15 +35,19 @@ if check["success"] == True: # check for success
     if current_cf_ip == current_ip: # Check if our current IP matches what Cloudflare has
         print ("IP address hasn't changed") # If it matches we don't need to change it
         print ("Date last modified: " + check["result"]["modified_on"] + "\n")
+
     else: # If it has changed update it
         response = put(url, headers=headers, json=data) # Send Updated IP Address
         res = response.json() # response to json
+
         if res["success"] == True: # check for success
             print ("IP Address changed to: " + res["result"]["content"]) # Print updated IP
             print ("Date lats modified: " + res["result"]["modified_on"] + "\n")
+
         else:
             print ("Check your data.\nPlease see https://api.cloudflare.com/#dns-records-for-a-zone-errors")
             print (res["errors"])
+
 else:
     print ("Check your data.\nPlease see https://api.cloudflare.com/#dns-records-for-a-zone-errors")
     print (check["errors"])
