@@ -2,7 +2,7 @@
 from requests import get, put
 # change these as you need please see included links for more details
 zoneID = 'Zone-ID-For-Domain' # Getting Zone ID's https://api.cloudflare.com/#zone-list-zones
-dnsID = 'DNS-ID-For-SubDomain' # Getting DNS record ID https://api.cloudflare.com/#dns-records-for-a-zone-list-dns-records
+dnsID = 'DNS-ID-For-SubDomain' # Getting DNS Record ID's https://api.cloudflare.com/#dns-records-for-a-zone-list-dns-records
 # Put together our Header
 headers = {
     'X-Auth-Email': 'Your-Email-Address', # The email you use to login into Cloudflare
