@@ -13,21 +13,23 @@ headers = {
 ip = get('https://diagnostic.opendns.com/myip') # fetch our current IP address
 current_ip = ip.text # we only need the text on the page
 # Put together the data we need to send so we can update our IP address
-data = {
-    # https://api.cloudflare.com/#dns-records-for-a-zone-update-dns-record
-    "type":"A", # record type A or AAA
-    "name":"FQDN-That-You-Want-Update", # your.domain.example.com
-    "content":current_ip, # The IP address we fetched from https://diagnostic.opendns.com/myip
-    "ttl":'1', # set to 1 for AUTO
-    "proxied":'false' # whether or not to proxy site thru cloudflare. Depends on your needs.
-    # See here --> https://support.cloudflare.com/hc/en-us/articles/200169156-Identifying-network-ports-compatible-with-Cloudflare-s-proxy
-}
+
 # Put together our Cloudflare URL with our zoneID and our dnsID
 url = "https://api.cloudflare.com/client/v4/zones/" + zoneID + "/dns_records/" + dnsID
 # Find Current Cloudflare IP address
 check_cf_IP = get(url, headers=headers) # GET Info for the exact domain we want to update
 check = check_cf_IP.json() # convert to json
 current_cf_ip = check["result"]["content"] # Find the IP that Cloudflare has right now
+fqdn = check["result"]["name"] # Get FQDN for domain we are changing
+data = {
+    # https://api.cloudflare.com/#dns-records-for-a-zone-update-dns-record
+    "type":"A", # record type A or AAA
+    "name":fqdn, # your.domain.example.com
+    "content":current_ip, # The IP address we fetched from https://diagnostic.opendns.com/myip
+    "ttl":'1', # set to 1 for AUTO
+    "proxied":'false' # whether or not to proxy site thru cloudflare. Depends on your needs.
+    # See here --> https://support.cloudflare.com/hc/en-us/articles/200169156-Identifying-network-ports-compatible-with-Cloudflare-s-proxy
+}
 # Show Our Current IP Addresses
 print ("Current Cloudflare IP: " + current_cf_ip + "\n")
 print ("Your Current IP  : " + current_ip + "\n")
