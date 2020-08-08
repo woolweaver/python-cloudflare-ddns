@@ -38,17 +38,3 @@ zoneID = 'Zone-ID-For-Domain'
 ```
 dnsID = 'DNS-ID-For-SubDomain'
 ```
-
-### 5. Setting Domain That Needs Changed
-
-[https://api.cloudflare.com/#dns-records-for-a-zone-update-dns-record](https://api.cloudflare.com/#dns-records-for-a-zone-update-dns-record)
-
-```
-data = {
-    "type":"A",
-    "name":"FQDN-That-You-Want-Update",
-    "content":new_ip,
-    "ttl":'1',
-    "proxied":'false'
-}
-```
