@@ -11,7 +11,12 @@ In [config/config.py](https://github.com/mwoolweaver/Cloudflare_Dynamic_DNS/blob
 pip3 install requests
 ```
 
-### 2. Getting API Tokens
+### 3. Get Code
+```
+git clone https://github.com/mwoolweaver/Python-Cloudflare-DDNS.git
+```
+
+### 3. Getting API Tokens
 
 [https://dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens)
 
@@ -23,7 +28,7 @@ headers = {
 }
 ```
 
-### 3. Getting Zone ID's 
+### 4. Getting Zone ID's 
 
 [https://api.cloudflare.com/#zone-list-zones](https://api.cloudflare.com/#zone-list-zones)
 
@@ -31,10 +36,16 @@ headers = {
 zoneID = 'Zone-ID-For-Domain'
 ```
 
-### 4. Getting DNS Record ID 
+### 5. Getting DNS Record ID 
 
 [https://api.cloudflare.com/#dns-records-for-a-zone-list-dns-records](https://api.cloudflare.com/#dns-records-for-a-zone-list-dns-records)
 
 ```
 dnsID = 'DNS-ID-For-SubDomain'
+```
+
+### 6. Runnig
+```
+cd Python-Cloudflare-DDNS
+./cf_ddns.py
 ```
