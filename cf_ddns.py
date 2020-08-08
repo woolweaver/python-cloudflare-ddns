@@ -21,11 +21,11 @@ url = "https://api.cloudflare.com/client/v4/zones/" + zoneID + "/dns_records/" +
 check_cf_IP = get(url, headers=headers) # GET Info for the exact domain we want to update
 check = check_cf_IP.json() # convert to json
 
-if check["success"] == True: # check for success 
+if check["success"] == True: # check for success
     current_cf_ip = check["result"]["content"] # Find the IP that Cloudflare has right now
     fqdn = check["result"]["name"] # Get FQDN for domain we are changing
     ttl = check["result"]["ttl"] # Get TTL
-    record_type = check["result"]["type"] # get record type 
+    record_type = check["result"]["type"] # get record type
     proxy = check["result"]["proxied"] # get proxy status
     data = {
         # https://api.cloudflare.com/#dns-records-for-a-zone-update-dns-record
