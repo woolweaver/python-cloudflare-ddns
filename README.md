@@ -1,5 +1,7 @@
 # Cloudflare Dynamic DNS
-[Cloudflare Dynamic DNS](https://github.com/mwoolweaver/Cloudflare-Dynamic-DNS) in Python3
+Cloudflare Dynamic DNS in Python3
+
+[https://github.com/mwoolweaver/Cloudflare-Dynamic-DNS](https://github.com/mwoolweaver/Cloudflare-Dynamic-DNS)
 
 ## How To Use 
 
