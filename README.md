@@ -7,7 +7,7 @@ At the top of the python script ([cf_ddns](https://github.com/mwoolweaver/Cloudf
 
 ### Getting Zone ID's 
 
-https://api.cloudflare.com/#zone-list-zones
+[https://api.cloudflare.com/#zone-list-zones](https://api.cloudflare.com/#zone-list-zones)
 
 ```
 zoneID = 'Zone-ID-For-Domain'
@@ -15,7 +15,7 @@ zoneID = 'Zone-ID-For-Domain'
 
 ### Getting DNS Record ID 
 
-https://api.cloudflare.com/#dns-records-for-a-zone-list-dns-records
+[https://api.cloudflare.com/#dns-records-for-a-zone-list-dns-records](https://api.cloudflare.com/#dns-records-for-a-zone-list-dns-records)
 
 ```
 dnsID = 'DNS-ID-For-SubDomain'
@@ -23,7 +23,7 @@ dnsID = 'DNS-ID-For-SubDomain'
 
 ### Getting API Tokens
 
-https://dash.cloudflare.com/profile/api-tokens
+[https://dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens)
 
 ```
 headers = {
@@ -34,7 +34,8 @@ headers = {
 ```
 
 ### Setting Domain That Needs Changed
-https://api.cloudflare.com/#dns-records-for-a-zone-update-dns-record
+
+[https://api.cloudflare.com/#dns-records-for-a-zone-update-dns-record](https://api.cloudflare.com/#dns-records-for-a-zone-update-dns-record)
 
 ```
 data = {
