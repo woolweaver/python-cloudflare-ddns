@@ -26,14 +26,14 @@ url = "https://api.cloudflare.com/client/v4/zones/" + zoneID + "/dns_records/" +
 # Find Current Cloudflare IP address
 check_cf_IP = get(url, headers=headers) # GET Info for the exact domain we want to update
 check = check_cf_IP.json() # convert to json
-current_cf_ip = check["result"]["content"] # Find the IP Cloudflare has right now
+current_cf_ip = check["result"]["content"] # Find the IP that Cloudflare has right now
 # Show Our Current IP Addresses
 print ("Current Cloudflare IP: " + current_cf_ip + "\n")
 print ("Your Current IP  : " + current_ip + "\n")
 # Logic to check our IP Addresses
-if current_cf_ip == current_ip: # Check if our current IP matches what Cloudflare has
-    print ("IP address hasn't changed")
-else: # If it has Changed Update it
+if current_cf_ip == current_ip: # Check if our current IP matches what Cloudflare has 
+    print ("IP address hasn't changed") # If it matches we don't need to change it
+else: # If it has changed update it
     response = put(url, headers=headers, json=data) # Send Updated IP Address
     res = response.json() # Get response to make sure update was succesful
     print ("IP Address changed to: " + res["result"]["content"]) # Print updated IP
