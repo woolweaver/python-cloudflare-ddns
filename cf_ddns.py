@@ -16,10 +16,11 @@ current_ip = ip.text # we only need the text on the page
 data = {
     # https://api.cloudflare.com/#dns-records-for-a-zone-update-dns-record
     "type":"A", # record type A or AAA
-    "name":"FQDN-That-You-Want-Update", # example.com
+    "name":"FQDN-That-You-Want-Update", # your.domain.example.com
     "content":current_ip, # The IP address we fetched from https://diagnostic.opendns.com/myip
-    "ttl":'1', # set to 1 for AUTO 
-    "proxied":'false' # whether or not to proxy site thru cloudflare
+    "ttl":'1', # set to 1 for AUTO
+    "proxied":'false' # whether or not to proxy site thru cloudflare. Depends on your needs.
+    # See here --> https://support.cloudflare.com/hc/en-us/articles/200169156-Identifying-network-ports-compatible-with-Cloudflare-s-proxy
 }
 # Put together our Cloudflare URL with our zoneID and our dnsID
 url = "https://api.cloudflare.com/client/v4/zones/" + zoneID + "/dns_records/" + dnsID
@@ -31,9 +32,15 @@ current_cf_ip = check["result"]["content"] # Find the IP that Cloudflare has rig
 print ("Current Cloudflare IP: " + current_cf_ip + "\n")
 print ("Your Current IP  : " + current_ip + "\n")
 # Logic to check our IP Addresses
-if current_cf_ip == current_ip: # Check if our current IP matches what Cloudflare has 
+if current_cf_ip == current_ip: # Check if our current IP matches what Cloudflare has
     print ("IP address hasn't changed") # If it matches we don't need to change it
 else: # If it has changed update it
     response = put(url, headers=headers, json=data) # Send Updated IP Address
-    res = response.json() # Get response to make sure update was succesful
-    print ("IP Address changed to: " + res["result"]["content"]) # Print updated IP
+    res = response.json() # response to json
+    if res["success"] == True: # check if update was successful
+        print ("IP Address changed to: " + res["result"]["content"]) # Print updated IP
+    else:
+        print ("Check your data.\n")
+        print (check)
+        print ("\n")
+        print (res)
