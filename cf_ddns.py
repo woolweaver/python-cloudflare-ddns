@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 from requests import get, put
-
-# change these as you need please see icluded links for more details
+# change these as you need please see included links for more details
 zoneID = 'Zone-ID-For-Domain' # Getting Zone ID's https://api.cloudflare.com/#zone-list-zones
 dnsID = 'DNS-ID-For-SubDomain' # Getting DNS record ID https://api.cloudflare.com/#dns-records-for-a-zone-list-dns-records
 # Put together our Header
@@ -22,7 +21,7 @@ data = {
     "ttl":'1', # set to 1 for AUTO 
     "proxied":'false' # whether or not to proxy site thru cloudflare
 }
-# Put together our Cloudflare URL with zoneID and dnsID
+# Put together our Cloudflare URL with our zoneID and our dnsID
 url = "https://api.cloudflare.com/client/v4/zones/" + zoneID + "/dns_records/" + dnsID
 # Find Current Cloudflare IP address
 check_cf_IP = get(url, headers=headers) # GET Info for the exact domain we want to update
