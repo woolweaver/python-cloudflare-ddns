@@ -5,7 +5,7 @@ Cloudflare Dynamic DNS in Python3
 
 ## How To Use 
 
-At the top of the python script ([cf_ddns](https://github.com/mwoolweaver/Cloudflare_Dynamic_DNS/blob/master/cf_ddns.py)) you will see the following variables. Make sure you change these. I have included some information about how to get these
+At the top of the python script ([cf_ddns.py](https://github.com/mwoolweaver/Cloudflare_Dynamic_DNS/blob/master/cf_ddns.py)) you will see the following variables. Make sure you change these. I have included some information about how to get these
 
 ### Getting Zone ID's 
 
