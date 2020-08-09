@@ -14,15 +14,16 @@ check_cf = get(url, headers=headers) # GET Info for the exact domain we want to 
 check = check_cf.json() # convert to json
 
 if check["success"] == True: # check for success
+
     current_cf_ip = check["result"]["content"] # Find the IP that Cloudflare has right now
     fqdn = check["result"]["name"] # Get FQDN for domain we are changing
     ttl = check["result"]["ttl"] # Get TTL
     record_type = check["result"]["type"] # get record type
     proxy = check["result"]["proxied"] # get proxy status
 
-    # Create the data we want to pass to Cloudflare API
-    data = {
-        # https://api.cloudflare.com/#dns-records-for-a-zone-update-dns-record
+    # Create the data we need to pass to Cloudflare API
+    data = { # https://api.cloudflare.com/#dns-records-for-a-zone-update-dns-record
+
         "type":record_type, # record type A or AAA. We just pass what is alreay set.
         "name":fqdn, # We just pass what is alreay set.
         "content":current_ip, # The IP address we fetched from https://diagnostic.opendns.com/myip
