@@ -6,14 +6,15 @@ Cloudflare Dynamic DNS via Python 3
 
 In [config/tokens.py](https://github.com/mwoolweaver/Cloudflare_Dynamic_DNS/blob/master/config/tokens.py) you will see the following variables. Make sure you change these. I have included some information about how to get these
 
-### 1. Install dependencies
-```
-pip3 install requests
-```
-
-### 3. Get Code
+### 1. Get Code
 ```
 git clone https://github.com/mwoolweaver/Python-Cloudflare-DDNS.git
+```
+
+### 2. Install dependencies
+```
+cd Python-Cloudflare-DDNS
+pip3 install -r requirements.txt
 ```
 
 ### 3. Getting/Creating API Tokens
@@ -47,6 +48,5 @@ dnsID = 'DNS-ID-For-SubDomain' # DNS ID for subdomain we want to change
 
 ### 6. Runnig
 ```
-cd Python-Cloudflare-DDNS
 ./cf_ddns.py
 ```
