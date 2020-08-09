@@ -16,24 +16,25 @@ pip3 install requests
 git clone https://github.com/mwoolweaver/Python-Cloudflare-DDNS.git
 ```
 
-### 3. Getting API Tokens
+### 3. Getting/Creating API Tokens
 
 [https://dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens)
 
 ```
 headers = {
-    'X-Auth-Email': 'Your-Email-Address',
-    'X-Auth-Key': 'Global-API-Key',
-    'Content-Type': 'application/json'
+
+    'Authorization': 'Your-API-Token', # Get/Create API token here ---> https://dash.cloudflare.com/profile/api-tokens
+
+    'Content-Type': 'application/json' # Type of data to be passed must be application/json
 }
 ```
 
 ### 4. Getting Zone ID's 
 
-[https://api.cloudflare.com/#zone-list-zones](https://api.cloudflare.com/#zone-list-zones)
+[https://api.cloudflare.com/#getting-started-resource-ids](https://api.cloudflare.com/#getting-started-resource-ids)
 
 ```
-zoneID = 'Zone-ID-For-Domain'
+zoneID = 'Zone-ID-For-Domain' # Zone ID for domain we need to change
 ```
 
 ### 5. Getting DNS Record ID 
@@ -41,7 +42,7 @@ zoneID = 'Zone-ID-For-Domain'
 [https://api.cloudflare.com/#dns-records-for-a-zone-list-dns-records](https://api.cloudflare.com/#dns-records-for-a-zone-list-dns-records)
 
 ```
-dnsID = 'DNS-ID-For-SubDomain'
+dnsID = 'DNS-ID-For-SubDomain' # DNS ID for subdomain we want to change
 ```
 
 ### 6. Runnig
