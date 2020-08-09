@@ -50,3 +50,11 @@ dnsID = 'DNS-ID-For-SubDomain' # DNS ID for subdomain we want to change
 ```
 ./cf_ddns.py
 ```
+
+
+#### note:
+
+##### pfsense
+```
+git clone -b pfsense --single-branch https://github.com/mwoolweaver/Python-Cloudflare-DDNS.git
+```
