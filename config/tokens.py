@@ -4,8 +4,7 @@
 
 # Please see included links for more details.
 
-# Put together the Header we send to Cloudflare.
-headers = {
+headers = { # Put together the Header we send to CF.
 
     'Authorization': 'Your-API-Token', # Get/Create API token here ---> https://dash.cloudflare.com/profile/api-tokens
 
