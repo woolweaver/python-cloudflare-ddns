@@ -4,7 +4,7 @@ Cloudflare Dynamic DNS via Python 3
 
 ## How To Use 
 
-In [config/config.py](https://github.com/mwoolweaver/Cloudflare_Dynamic_DNS/blob/master/config/config.py) you will see the following variables. Make sure you change these. I have included some information about how to get these
+In [config/tokens.py](https://github.com/mwoolweaver/Cloudflare_Dynamic_DNS/blob/master/config/tokens.py) you will see the following variables. Make sure you change these. I have included some information about how to get these
 
 ### 1. Install dependencies
 ```
