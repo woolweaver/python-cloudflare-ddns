@@ -1,10 +1,10 @@
 Cloudflare Dynamic DNS via Python 3
 
-[https://github.com/mwoolweaver/Cloudflare-Dynamic-DNS](https://github.com/mwoolweaver/Cloudflare-Dynamic-DNS)
+[https://github.com/woolweaver-bid/python-cloudflare-ddns](https://github.com/woolweaver-bid/python-cloudflare-ddns)
 
 ## How To Use 
 
-In [config/tokens.py](https://github.com/mwoolweaver/Cloudflare_Dynamic_DNS/blob/master/config/tokens.py) you will see the following variables. Make sure you change these. I have included some information about how to get these
+In [config/tokens.py](https://github.com/woolweaver-bid/python-cloudflare-ddns/blob/master/config/tokens.py) you will see the following variables. Make sure you change these. I have included some information about how to get these
 
 ### 1. Get Code
 ```
@@ -56,9 +56,9 @@ dnsID = 'DNS-ID-For-SubDomain' # DNS ID for subdomain we want to change
 
 ##### pfsense
 
-please use the [pfsense](https://github.com/mwoolweaver/Python-Cloudflare-DDNS/tree/pfsense) branch
+please use the [pfsense](https://github.com/woolweaver-bid/python-cloudflare-ddns/tree/pfsense) branch
 
 or just clone and follow the instructions above
 ```
-git clone -b pfsense --single-branch https://github.com/mwoolweaver/Python-Cloudflare-DDNS.git
+git clone -b pfsense --single-branch https://github.com/woolweaver-bid/python-cloudflare-ddns.git
 ```
