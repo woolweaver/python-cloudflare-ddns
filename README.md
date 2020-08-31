@@ -13,7 +13,7 @@ git clone https://github.com/mwoolweaver/Python-Cloudflare-DDNS.git
 
 ### 2. Install dependencies
 ```
-cd Python-Cloudflare-DDNS
+cd python-cloudflare-ddns
 pip3 install -r requirements.txt
 ```
 
