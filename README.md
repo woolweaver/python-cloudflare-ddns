@@ -8,7 +8,7 @@ In [config/tokens.py](https://github.com/woolweaver-bid/python-cloudflare-ddns/b
 
 ### 1. Get Code
 ```
-git clone https://github.com/mwoolweaver/Python-Cloudflare-DDNS.git
+git clone https://github.com/mwoolweaver/python-cloudflare-ddns.git
 ```
 
 ### 2. Install dependencies
