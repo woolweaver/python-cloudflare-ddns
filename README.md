@@ -4,8 +4,6 @@ Cloudflare Dynamic DNS via Python 3
 
 ## How To Use 
 
-In [config/tokens.py](https://github.com/woolweaver-bid/python-cloudflare-ddns/blob/master/config/tokens.py) you will see the following variables. Make sure you change these. I have included some information about how to get these
-
 ### 1. Get Code
 ```
 git clone https://github.com/mwoolweaver/python-cloudflare-ddns.git
@@ -18,6 +16,8 @@ pip3 install -r requirements.txt
 ```
 
 ### 3. Getting/Creating API Tokens
+
+In [config/tokens.py](https://github.com/woolweaver-bid/python-cloudflare-ddns/blob/master/config/tokens.py) you will see the following variables. Make sure you change these. I have included some information about how to get these
 
 [https://dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens)
 
