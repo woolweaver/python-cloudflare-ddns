@@ -20,7 +20,7 @@ pip3 install -r requirements.txt
 ### 3. Getting/Creating API Tokens
 
 In [config/tokens.py](https://github.com/woolweaver-bid/python-cloudflare-ddns/blob/master/config/tokens.py) you will see the following variables. Make sure you change these.     
-I have included some information about [how to get these](https://dash.cloudflare.com/profile/api-tokens)
+I have included some information about [how to get these](https://dash.cloudflare.com/profile/api-tokens).
 
 ```
 headers = {
